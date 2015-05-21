@@ -13,6 +13,7 @@
   font-feature-settings: "kern";
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  line-height: 1.618em;
 }
 
 html, body {
@@ -155,7 +156,7 @@ html {
 }
 body {
   font-size: 1em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.5;
+  line-height: 1.618em;
   font-weight: 400;
   /* do I want a better, wider ranging font-stack? */
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -195,18 +196,11 @@ h6 { font-size: 1.33rem; }
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  line-height: normal;
 }
 
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: normal;
-}
-
-ul {
-  margin-bottom: 1em;
-  line-height: normal;
 }
 
 small,
@@ -249,7 +243,11 @@ ol, ul {
 ol {
   list-style: decimal;
 }
+
 ul {
   list-style: initial;
 }
 
+ol li, ul li {
+  line-height: 1.618em;
+}
