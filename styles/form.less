@@ -41,7 +41,7 @@ select {
   height: 2em;
   padding: .5em .75em;
   background-color: #fff;
-  border: 1px solid @ookb-lightgray;
+  border: 1px solid @ookb-gray;
   border-radius: .25em;
   box-shadow: none;
   box-sizing: border-box;
@@ -76,9 +76,15 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid @ookb-blue;
-  outline: 0; 
+  border: 1px solid @ookb-purple;
+  outline-color: @ookb-purple; 
 }
+/* help with :focus pseudo-class & outline:
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/outline
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/outline-style
+    - http://reference.sitepoint.com/css/pseudoclass-focus
+    - https://css-tricks.com/almanac/selectors/f/focus/
+*/
 
 label,
 legend {
@@ -89,7 +95,7 @@ legend {
 
 fieldset {
   padding: 0;
-  border-width: 0;
+  border-width: 1px solid @ookb-darkgray;
 }
 
 input[type="checkbox"],
