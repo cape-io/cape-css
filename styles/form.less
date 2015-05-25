@@ -11,7 +11,8 @@
 **/
 
 /* styling those forms */
-form {
+form,
+fieldset {
   input, button, select, textarea {
     font-family: @open-sans-stack;
     font-size: inherit;
@@ -72,6 +73,9 @@ textarea {
   padding-bottom: .5rem; 
 }
 
+input:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -105,11 +109,6 @@ fieldset {
   margin-bottom: 2em;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-}
-
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
@@ -122,4 +121,23 @@ label > .label-body {
   margin: .5em 0 1em 0;
   font-size: .8em;
   color: @ookb-gray;
+}
+
+/*
+  Checkboxes and Radio buttons
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  -webkit-appearance: checkbox;
+  box-sizing: border-box;
+  margin: 3px 0.5ex;
+  padding: 1px;
+  cursor: auto;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
 }
