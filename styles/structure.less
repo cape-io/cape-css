@@ -1,5 +1,9 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// might be a useful post: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+// also might be useful:   http://alistapart.com/article/negativemargins
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -275,4 +279,34 @@ ul {
 
 ol li, ul li {
   line-height: 1.618em;
+}
+
+/** Some basic table styling **/
+table {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+
+table thead {
+  text-align: left;
+  border-bottom: 2px solid;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,.075);
+}
+
+table tr th,
+table tr td {
+  padding: .4em;
+  border-right: 1px solid rgba(0,0,0,.15);
+}
+
+table tr th:first-child,
+table tr td:first-child {
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  border-right: none;
 }

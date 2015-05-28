@@ -27,7 +27,7 @@ h2, h3, h4, h5, h6 { font-weight: 600; }
 }
 
 header {
-  background: @ookb-lightgray url('everything-is-connected.png') no-repeat center center /*fixed*/;
+  background: transparent url('everything-is-connected.png') no-repeat center center /*fixed*/;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,12 +35,16 @@ header {
   text-align: center;
 //  box-shadow: inset 0 0 6px rgba(0,0,0,.25);
   padding: 1px;
-  margin-bottom: 2em;
+  /***/
+  margin: 0 -50vw 2em;
+  width: 100vw;
+  position: relative;
+  left: 50%;
 }
 
 header h2 {
   background: white;
-  margin: 2em auto;
+  margin: 3em auto;
   padding: 1em;
   display: inline-block;
   box-shadow: 0 0 6px rgba(0,0,0,.5);
@@ -49,4 +53,34 @@ header h2 {
 footer {
   margin-top: 4em;
   margin-bottom: 8em;
+}
+
+/** website table... **/
+.sites { overflow-x: scroll; }
+
+table {
+  width: 100%;
+}
+
+thead, tbody {
+  width: 100%;
+  font-size: 80%;
+}
+
+/** login menu **/
+/** would it be good to change the HTML a bit to make this work better? **/
+
+main {
+  aside {
+    nav {
+      position: fixed;
+      top:0;
+      left: 0;
+      
+      ul.menu {
+        background: white;
+        padding: 1em;
+      }
+    }
+  }
 }
