@@ -32,6 +32,16 @@ fieldset {
   }
 }
 
+form {
+  .group .group {
+    margin: 0;
+  }
+  .column,
+  .columns {
+    margin-bottom: 0;
+  }
+}
+
 /** 
     Started with basic form stuff from Skeleton
     and then have evolved it with stuff from GridForms and Bootstrap
@@ -60,7 +70,7 @@ textarea,
 select {
   height: 2em;
   padding: @form-padding;
-  background-color: #fff;
+  background-color: @ookb-white;
   border: 1px solid @ookb-gray;
   border-radius: .25em;
   box-shadow: none;
@@ -99,13 +109,20 @@ textarea {
 input:focus,
 input[type="checkbox"]:focus,
 input[type="radio"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="color"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
 textarea:focus,
 select:focus {
   border: 1px solid @ookb-purple;
@@ -128,8 +145,8 @@ legend {
 fieldset {
   padding: 1em;
   border: 1px solid @ookb-darkgray;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 label > .label-body {
@@ -182,7 +199,23 @@ input[type="radio"] {
     display: table-cell;
   }
   
-  input {
+  .form-control:first-child,
+  .input-group-addon:first-child,
+  .input-group-btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .form-control:last-child,
+  .input-group-addon:last-child,
+  .input-group-btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-control:not(:first-child):not(:last-child), 
+  .input-group-addon:not(:first-child):not(:last-child), 
+  .input-group-btn:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
   
@@ -199,13 +232,9 @@ input[type="radio"] {
     vertical-align: middle;
     
     &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
       border-right: 0;
     }
     &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
       border-left: 0;
     }
   }
