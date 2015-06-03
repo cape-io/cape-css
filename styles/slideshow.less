@@ -1,0 +1,45 @@
+/* Front Slideshow
+   ============================================================== */
+
+ul.slideshow {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width:50%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 500ms;
+
+    &.active {
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: @small) {
+  ul.slideshow {
+    padding-bottom: 125%;
+    li {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @small) {
+  ul.slideshow {
+    padding-bottom: 75%;
+  }
+}
+
+@media (min-width: @medium) {
+  ul.slideshow {
+    padding-bottom: 66%;
+  }
+}
