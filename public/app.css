@@ -1052,7 +1052,6 @@ ul.fb-events .event {
   background: white;
   border: 1px solid #848478;
   font-size: .85em;
-  line-height: 1;
   margin: 1.5em;
   padding: 1.5em;
   max-width: 100%;
@@ -1067,32 +1066,44 @@ ul.fb-events .event .info {
 }
 ul.fb-events .event .info .name h3 {
   font-size: 1.1111em;
-  margin: 0 0 .25em;
-  line-height: 1;
+  margin: .33em 0;
+  line-height: 1.25;
 }
 ul.fb-events .event .info .name h3 a {
   color: #606767;
   text-decoration: none;
+  line-height: 1.25;
 }
 ul.fb-events .event .info .name h3 a:hover,
 ul.fb-events .event .info .name h3 a:focus {
   border-bottom: 1px solid #b75051;
 }
 ul.fb-events .event .info .cover {
-  margin: 0 -1.5em;
+  margin: -1.5em -1.5em 0;
 }
 ul.fb-events .event .info .cover img {
   width: 100%;
 }
 ul.fb-events .event .info .start,
 ul.fb-events .event .info .end,
-ul.fb-events .event .info .date {
-  color: #606767;
+ul.fb-events .event .info .date,
+ul.fb-events .event .info .date-time {
+  color: #848478;
 }
 ul.fb-events .event .info .location {
   color: #848478;
   font-size: .95em;
-  margin: .5em 0;
+  margin: 0 0 1em;
+}
+ul.fb-events .event .info .location a {
+  color: #848478;
+  border-bottom: 1px solid #c2d3ba;
+  text-decoration: none;
+}
+ul.fb-events .event .info .location a:hover,
+ul.fb-events .event .info .location a:focus {
+  color: #606767;
+  border-bottom: 1px solid #606767;
 }
 /**
   responsive way to wrap iframes/embedded objects.

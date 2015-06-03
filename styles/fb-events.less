@@ -17,7 +17,6 @@ ul.fb-events {
     background: @ookb-white;
     border: 1px solid @ookb-gray;
     font-size: .85em;
-    line-height: 1;
     margin: 1.5em;
     padding: 1.5em;
     max-width: 100%;
@@ -34,12 +33,13 @@ ul.fb-events {
       .name {
         h3 {
           font-size: 1.1111em;
-          margin: 0 0 .25em;
-          line-height: 1;
+          margin: .33em 0;
+          line-height: 1.25;
           
           a {
             color: @ookb-darkgray;
             text-decoration: none;
+            line-height: 1.25;
             
             &:hover,
             &:focus {
@@ -50,7 +50,7 @@ ul.fb-events {
       }
 
       .cover {
-        margin: 0 -1.5em;
+        margin: -1.5em -1.5em 0;
         
         img {
           width: 100%;
@@ -59,17 +59,27 @@ ul.fb-events {
 
       .start,
       .end,
-      .date {
-        color: @ookb-darkgray;
+      .date,
+      .date-time {
+        color: @ookb-gray;
       }
 
       .location {
         color: @ookb-gray;
         font-size: .95em;
-        margin: .5em 0;
-      }
+        margin: 0 0 1em;
+        
+        a {
+          color: @ookb-gray;
+          border-bottom: 1px solid @ookb-lightgray;
+          text-decoration: none;
 
-      .description {
+          &:hover,
+          &:focus {
+            color: @ookb-darkgray;
+            border-bottom: 1px solid @ookb-darkgray;
+          }
+        }
       }
     }
   }
