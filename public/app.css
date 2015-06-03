@@ -1036,3 +1036,85 @@ main aside nav ul.menu {
   background: white;
   padding: 1em;
 }
+/** Facebook event iframe styling **/
+ul.fb-events {
+  background: rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: .01em;
+}
+ul.fb-events ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.fb-events .event {
+  background: white;
+  border: 1px solid #848478;
+  font-size: .85em;
+  line-height: 1;
+  margin: 1.5em;
+  padding: 1.5em;
+  max-width: 100%;
+}
+ul.fb-events .event:hover,
+ul.fb-events .event:focus {
+  border-color: #8ca573;
+  box-shadow: 0 0 0.75em rgba(140, 165, 115, 0.5);
+}
+ul.fb-events .event .info {
+  position: relative;
+}
+ul.fb-events .event .info .name h3 {
+  font-size: 1.1111em;
+  margin: 0 0 .25em;
+  line-height: 1;
+}
+ul.fb-events .event .info .name h3 a {
+  color: #606767;
+  text-decoration: none;
+}
+ul.fb-events .event .info .name h3 a:hover,
+ul.fb-events .event .info .name h3 a:focus {
+  border-bottom: 1px solid #b75051;
+}
+ul.fb-events .event .info .cover {
+  margin: 0 -1.5em;
+}
+ul.fb-events .event .info .cover img {
+  width: 100%;
+}
+ul.fb-events .event .info .start,
+ul.fb-events .event .info .end,
+ul.fb-events .event .info .date {
+  color: #606767;
+}
+ul.fb-events .event .info .location {
+  color: #848478;
+  font-size: .95em;
+  margin: .5em 0;
+}
+/**
+  responsive way to wrap iframes/embedded objects.
+  best to not inline style things — and especially don't declare height/widths inline
+**/
+.embed-wrapper {
+  position: relative;
+  /** padding-bottom = calc(100% * height / width); of the children elements... works best if everything is the same height [like if its a slideshow] **/
+  padding-bottom: 56.25%;
+  /** this might need to be set dynamically based on embedded content ratio **/
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.embed-wrapper iframe,
+.embed-wrapper object,
+.embed-wrapper embed {
+  border: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,76 @@
+
+/** Facebook event iframe styling **/
+
+ul.fb-events {
+  background: rgba(0,0,0,.1);
+  list-style: none;
+  margin: 0;
+  padding: .01em;
+
+  ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+
+  .event {
+    background: @ookb-white;
+    border: 1px solid @ookb-gray;
+    font-size: .85em;
+    line-height: 1;
+    margin: 1.5em;
+    padding: 1.5em;
+    max-width: 100%;
+   
+    &:hover,
+    &:focus { 
+      border-color: @ookb-green;
+      box-shadow: 0 0 .75em rgba(140,165,115,.5);
+    }
+    
+    .info {
+      position: relative;
+      
+      .name {
+        h3 {
+          font-size: 1.1111em;
+          margin: 0 0 .25em;
+          line-height: 1;
+          
+          a {
+            color: @ookb-darkgray;
+            text-decoration: none;
+            
+            &:hover,
+            &:focus {
+              border-bottom: 1px solid @ookb-red;
+            }
+          }
+        }
+      }
+
+      .cover {
+        margin: 0 -1.5em;
+        
+        img {
+          width: 100%;
+        }
+      }
+
+      .start,
+      .end,
+      .date {
+        color: @ookb-darkgray;
+      }
+
+      .location {
+        color: @ookb-gray;
+        font-size: .95em;
+        margin: .5em 0;
+      }
+
+      .description {
+      }
+    }
+  }
+}
