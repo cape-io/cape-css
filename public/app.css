@@ -939,7 +939,7 @@ ul.slideshow li {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 50%;
+  width: 100%;
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -949,23 +949,9 @@ ul.slideshow li.active {
   z-index: 10;
   opacity: 1;
 }
-@media (max-width: 768px) {
-  ul.slideshow {
-    padding-bottom: 125%;
-  }
-  ul.slideshow li {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  ul.slideshow {
-    padding-bottom: 75%;
-  }
-}
-@media (min-width: 992px) {
-  ul.slideshow {
-    padding-bottom: 66%;
-  }
+ul.slideshow li img {
+  width: 100%;
+  height: auto;
 }
 /*******/
 /*******/
