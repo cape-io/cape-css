@@ -1,0 +1,57 @@
+
+// some helpful thinking examples: http://formvalidation.io/examples/
+/*
+  Nice logins:
+  https://bank.simple.com/signin
+  https://www.paypal.com/signin/?country.x=US&locale.x=en_US
+  https://thenounproject.com/accounts/login/
+  https://icloud.com/
+*/
+
+.transition-all(@time) {
+  transition: all @time;
+}
+
+login-form {
+   
+}
+
+.group-class-login {
+  position: relative;
+  font-size: 1.25em;
+  .transition-all(500ms);
+  
+  label {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:1em;
+    left: 1em;
+    width: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+      content:"\f003";
+      display: block;
+      font: normal normal normal 1.25em/1.4 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      color: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+    }
+    
+    span {
+      display: none;
+    }
+  }
+  
+  .form-control {
+    padding: 1em 1em 1em 2.5em;
+    height: auto;
+  }
+  
+}
