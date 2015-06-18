@@ -255,7 +255,8 @@ input[type="radio"] {
 .has-success .control-label, 
 .has-success .help-block, 
 .has-success .radio, 
-.has-success .radio-inline, 
+.has-success .radio-inline,
+.has-success .form-control-feedback,
 .has-success.checkbox label, 
 .has-success.checkbox-inline label, 
 .has-success.radio label, 
@@ -267,10 +268,20 @@ input[type="radio"] {
 .has-success .form-control {
   border-color: @ookb-green;
   outline-color: @ookb-green;
+  background: lighten(@ookb-green, 42%);
 }
 
 .has-warning .checkbox, 
-.has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label {
+.has-warning .checkbox-inline, 
+.has-warning .control-label, 
+.has-warning .help-block, 
+.has-warning .radio, 
+.has-warning .radio-inline, 
+.has-warning .form-control-feedback,
+.has-warning.checkbox label, 
+.has-warning.checkbox-inline label, 
+.has-warning.radio label, 
+.has-warning.radio-inline label {
   color: @ookb-yellow;
   outline-color: @ookb-yellow;
 }
@@ -278,9 +289,20 @@ input[type="radio"] {
 .has-warning .form-control {
   border-color: @ookb-yellow;
   outline-color: @ookb-yellow;
+  background: lighten(@ookb-yellow, 40%);
 }
 
-.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+.has-error .checkbox, 
+.has-error .checkbox-inline, 
+.has-error .control-label, 
+.has-error .help-block, 
+.has-error .radio, 
+.has-error .form-control-feedback,
+.has-error .radio-inline, 
+.has-error.checkbox label, 
+.has-error.checkbox-inline label, 
+.has-error.radio label, 
+.has-error.radio-inline label {
   color: @ookb-red;
   outline-color: @ookb-red;
 }
@@ -288,5 +310,30 @@ input[type="radio"] {
 .has-error .form-control {
   border-color: @ookb-red;
   outline-color: @ookb-red;
-  background: lighten(@ookb-red, 50%);
+  background: lighten(@ookb-red, 44%);
+}
+
+/* switch glyphicons to fontawesome */
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-remove::before {
+  content: "\f00d";
+}
+
+.glyphicon-ok::before {
+  content: "\f00c";
+}
+
+.glyphicon-warning-sign::before {
+  content: "\f071";
 }

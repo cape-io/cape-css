@@ -890,6 +890,7 @@ input[type="radio"] {
 .has-success .help-block,
 .has-success .radio,
 .has-success .radio-inline,
+.has-success .form-control-feedback,
 .has-success.checkbox label,
 .has-success.checkbox-inline label,
 .has-success.radio label,
@@ -900,6 +901,7 @@ input[type="radio"] {
 .has-success .form-control {
   border-color: #8ca573;
   outline-color: #8ca573;
+  background: #f7f9f5;
 }
 .has-warning .checkbox,
 .has-warning .checkbox-inline,
@@ -907,6 +909,7 @@ input[type="radio"] {
 .has-warning .help-block,
 .has-warning .radio,
 .has-warning .radio-inline,
+.has-warning .form-control-feedback,
 .has-warning.checkbox label,
 .has-warning.checkbox-inline label,
 .has-warning.radio label,
@@ -917,12 +920,14 @@ input[type="radio"] {
 .has-warning .form-control {
   border-color: #c5c065;
   outline-color: #c5c065;
+  background: #fdfdf9;
 }
 .has-error .checkbox,
 .has-error .checkbox-inline,
 .has-error .control-label,
 .has-error .help-block,
 .has-error .radio,
+.has-error .form-control-feedback,
 .has-error .radio-inline,
 .has-error.checkbox label,
 .has-error.checkbox-inline label,
@@ -934,7 +939,28 @@ input[type="radio"] {
 .has-error .form-control {
   border-color: #b75051;
   outline-color: #b75051;
-  background: #ffffff;
+  background: #f8efef;
+}
+/* switch glyphicons to fontawesome */
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-remove::before {
+  content: "\f00d";
+}
+.glyphicon-ok::before {
+  content: "\f00c";
+}
+.glyphicon-warning-sign::before {
+  content: "\f071";
 }
 /*
   Nice logins:
@@ -980,6 +1006,14 @@ input[type="radio"] {
 .group-class-login .form-control {
   padding: 1em 1em 1em 2.5em;
   height: auto;
+}
+wrapper-class-login {
+  position: relative;
+}
+.form-control-feedback {
+  position: absolute;
+  right: -1.5em;
+  top: 1em;
 }
 /* Front Slideshow
    ============================================================== */
