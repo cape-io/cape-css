@@ -934,6 +934,7 @@ input[type="radio"] {
 .has-error .form-control {
   border-color: #b75051;
   outline-color: #b75051;
+  background: #ffffff;
 }
 /*
   Nice logins:
